@@ -11,9 +11,9 @@ export default class LinksListItem extends React.Component {
   }
 };
 
-LinksListitem.propTypes = {
-  _id: React.propTypes.string.isRequired,
-  url: React.propTypes.string.isRequired,
-  userId: React.propTypes.string.isRequired,
-  shotUrl: React.propTypes.string.isRequired
+LinksListItem.propTypes = {
+  _id: React.PropTypes.string.isRequired,
+  url: React.PropTypes.string.isRequired,
+  userId: React.PropTypes.string.isRequired,
+  shortUrl: React.PropTypes.string.isRequired
 };
