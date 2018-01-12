@@ -43,7 +43,7 @@ export default class Signup extends React.Component {
               </form>
 
               <p>{this.state.count}</p>
-              <Link to="/">Already have an account? </Link>
+              <Link to="/">Have an account? </Link>
             </div>
           </div>
       );
