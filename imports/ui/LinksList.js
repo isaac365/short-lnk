@@ -27,17 +27,22 @@ export default class LinksList extends React.Component {
         console.log('componentwillunmount linkslist');
         this.linksTracker.stop();
     }
-    renderLinksListItems() {     
+    renderLinksListItems() {
+        if(this.state.links.length === 0 ) {
+            return (
+                <div className="item" >
+                    <p className="item__status_message">No links found</p>
+                </div>
+            );
+        }
         return this.state.links.map((link) => {
             const shortUrl = Meteor.absoluteUrl(link._id);
             return <LinksListItem key={link._id} shortUrl={shortUrl} {...link}/>;
-            // return <p key={link._id}>{link.url}</p>
         });
     }
     render() {
         return (
             <div>
-                <p>Links List</p>
                 <div>
                     {this.renderLinksListItems()}
                 </div>
